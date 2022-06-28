@@ -5,7 +5,9 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World';
-                sh "cat /etc/*release"
+                sh "cat /etc/*release";
+                sh "apt update";
+                sh "apt install curl";
                 sh "curl https://google.com";
             }
         }
