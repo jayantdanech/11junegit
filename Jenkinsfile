@@ -1,5 +1,3 @@
-def response = sh(script: 'curl -H \"Content-Type: application/json\" -d '{\"username\": \"test\", \"content\": \"hello\"}'  https://discord.com/api/webhooks/989880078513102858/FcY6mLAbkWAKwuODo7mN5gG34W3pvylKrTu-o2S4y6cUzCt3sQJhIihchIhBYyQx45tn', returnStdout: true)
-
 pipeline {
  agent {
     kubernetes {
@@ -21,7 +19,7 @@ pipeline {
             steps {
                 echo 'Hello World';
                 sh "cat /etc/*release";
-                sh "apk add curl";
+                sh "sleep 900";
             }
         }
     }
