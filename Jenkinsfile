@@ -6,8 +6,8 @@ pipeline {
             steps {
                 echo 'Hello World';
                 sh "cat /etc/*release";
-                sh "apt update";
-                sh "apt install curl";
+                sh "sudo apt update";
+                sh "sudo apt install curl";
                 sh "curl https://google.com";
             }
         }
