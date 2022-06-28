@@ -19,7 +19,6 @@ pipeline {
             steps {
                 echo 'Hello World';
                 sh "cat /etc/*release";
-                sh "sleep 900";
             }
         }
     }
