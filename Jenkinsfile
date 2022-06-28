@@ -5,7 +5,7 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World';
-                sh "ping -c 2 google.com";
+                curl google.com;
             }
         }
     }
