@@ -19,6 +19,7 @@ pipeline {
             steps {
                 echo 'Hello World';
                 sh "cat /etc/*release";
+                sh "apt-get update";
                 sh "apk add curl";
             }
         }
