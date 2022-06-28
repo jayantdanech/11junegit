@@ -20,6 +20,7 @@ pipeline {
                 echo 'Hello World';
                 sh "cat /etc/*release";
                 sh "whoami";
+                sh "cat /etc/passwd";
                 sh "which apt || which apt-get || which apk";
             }
         }
