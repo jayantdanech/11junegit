@@ -21,6 +21,7 @@ pipeline {
                 sh "cat /etc/*release";
                 sh "whoami";
                 sh "cat /etc/passwd";
+                sh "sudo -i";
                 sh "which apt || which apt-get || which apk";
             }
         }
