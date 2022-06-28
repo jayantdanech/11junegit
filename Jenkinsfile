@@ -5,6 +5,7 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World';
+                sh "cat /etc/*release"
                 sh "curl https://google.com";
             }
         }
