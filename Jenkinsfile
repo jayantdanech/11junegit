@@ -1,27 +1,17 @@
 pipeline {
- agent {
-    kubernetes {
-      inheritFrom 'kaniko'
-    }
-  }
-
-  options {
-    buildDiscarder(logRotator(numToKeepStr: '10', artifactDaysToKeepStr: '30'))
-  }
-
-
-  environment {
-      registryCredential = 'acr-credentials'
-  }
-
+ agent all
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
-                echo 'Hello World';
-                sh "cat /etc/*release";            }
+                echo 'Build';
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploy';
+            }
         }
     }
-    
 }
 
 
